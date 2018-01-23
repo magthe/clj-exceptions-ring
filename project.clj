@@ -2,11 +2,14 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [compojure "1.5.1"]
-                 [ring/ring-defaults "0.2.1"]]
-  :plugins [[lein-ring "0.9.7"]]
-  :ring {:handler simple-exceptions.handler/app}
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [compojure "1.6.0"]
+                 [camel-snake-kebab "0.4.0"]
+                 [ring/ring-defaults "0.3.1"]
+                 [ring/ring-json "0.4.0"]
+                 [ring/ring-mock "0.3.2"]]
+  :plugins [[lein-ring "0.12.3"]]
+  :ring {:handler simple-exceptions.handler/app
+         :stacktraces? false}
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.0"]]}})
+  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]]}})
